@@ -50,6 +50,8 @@ public class Main {
             } catch (InterruptedException | IOException e) {
                 e.printStackTrace();
                 Thread.currentThread().interrupt();
+            } finally {
+                semaphore.shutdown();
             }
         }
     }
